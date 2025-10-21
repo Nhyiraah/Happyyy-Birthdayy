@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    color: #ff6f00;
+    font-family: 'Georgia', serif;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#fireflies {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.centered {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ffa726;
+}
+
+h1,
+h2 {
+    color: #ffa726;
+}
+
+.message {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.message strong {
+    color: #ff6f00;
+}
+
+.message em {
+    color: #ffcc80;
+}
+
+button {
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #ff6f00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #f57c00;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.item {
+    background: rgba(255, 111, 0, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 111, 0, 0.2);
+    text-align: center;
+}
+
+.item img,
+.item video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(255, 140, 0, 0.3);
+}
